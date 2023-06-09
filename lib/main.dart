@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:git1/first_page.dart';
-import 'package:git1/name_provider.dart';
+import 'package:git1/UI_design/first_page.dart';
+import 'package:git1/Provider/name_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
   runApp(
+    ///provider class in MultiProvider
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: ((context) => NameProvider()))
@@ -26,7 +27,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
             seedColor: const Color.fromARGB(255, 58, 183, 162)),
-        useMaterial3: false,
       ),
       home: const FirstPage(),
     );
