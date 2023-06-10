@@ -6,5 +6,6 @@ class NameProvider extends ChangeNotifier {
 
   nameChange(String changeValue) {
     name = changeValue;
+     notifyListeners();
   }
 }
